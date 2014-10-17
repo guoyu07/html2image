@@ -160,8 +160,8 @@ public class HtmlImageGenerator {
 		editorPane.setSize(getDefaultSize());
 		editorPane.setEditable(false);
 		final SynchronousHTMLEditorKit kit = new SynchronousHTMLEditorKit();
-		editorPane.setEditorKitForContentType("text/html", kit);
-		editorPane.setContentType("text/html");
+		editorPane.setEditorKitForContentType("text/html; charset=UTF-8", kit);
+		editorPane.setContentType("text/html; charset=UTF-8");
 		editorPane.addPropertyChangeListener(new PropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent evt) {
 				if (evt.getPropertyName().equals("page")) {
