@@ -11,23 +11,27 @@ import javax.swing.text.html.ImageView;
 /**
  * @author Yoav Aharoni
  */
-public class SynchronousHTMLEditorKit extends HTMLEditorKit {
+public class SynchronousHTMLEditorKit extends HTMLEditorKit{
 
-	public Document createDefaultDocument() {
-		HTMLDocument doc = (HTMLDocument) super.createDefaultDocument();
-		doc.setAsynchronousLoadPriority(-1);
-		return doc;
-	}
+    @Override
+    public Document createDefaultDocument(){
+        HTMLDocument doc = (HTMLDocument) super.createDefaultDocument();
+        doc.setAsynchronousLoadPriority(-1);
+        return doc;
+    }
 
-	public ViewFactory getViewFactory() {
-		return new HTMLFactory() {
-			public View create(Element elem) {
-				View view = super.create(elem);
-				if (view instanceof ImageView) {
-					((ImageView) view).setLoadsSynchronously(true);
-				}
-				return view;
-			}
-		};
-	}
+    @Override
+    public ViewFactory getViewFactory(){
+        return new HTMLFactory(){
+
+            @Override
+            public View create(Element elem){
+                View view = super.create(elem);
+                if (view instanceof ImageView){
+                    ((ImageView) view).setLoadsSynchronously(true);
+                }
+                return view;
+            }
+        };
+    }
 }

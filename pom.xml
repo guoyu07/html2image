@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.github.xuwei-k</groupId>
+	<artifactId>html2image</artifactId>
+	<version>0.1.0</version>
+	
+	<packaging>jar</packaging>
+	<description>html2image</description>
+	
+	<url>https://github.com/xuwei-k/html2image</url>
+	<licenses>
+		<license>
+			<name>lgpl</name>
+			<url>http://www.gnu.org/licenses/lgpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<name>html2image</name>
+	<organization>
+		<name>com.github.xuwei-k</name>
+		<url>https://github.com/xuwei-k/html2image</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>xuwei-k</id>
+			<name>Kenji Yoshida</name>
+			<url>https://github.com/xuwei-k</url>
+		</developer>
+	</developers>
+	<scm>
+		<url>git@github.com:xuwei-k/html2image.git</url>
+		<connection>scm:git:git@github.com:xuwei-k/html2image.git</connection>
+		<tag>v0.1.0</tag>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>com.novocode</groupId>
+			<artifactId>junit-interface</artifactId>
+			<version>0.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

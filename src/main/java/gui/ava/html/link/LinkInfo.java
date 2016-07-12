@@ -1,26 +1,28 @@
 package gui.ava.html.link;
 
-import java.awt.*;
+import java.awt.Rectangle;
 import java.util.List;
 import java.util.Map;
 
 /**
  * @author Yoav Aharoni
  */
-public class LinkInfo {
-	private Map<String, String> attributes;
-	private List<Rectangle> bounds;
+public class LinkInfo{
 
-	public LinkInfo(Map<String, String> attributes, List<Rectangle> bounds) {
-		this.attributes = attributes;
-		this.bounds = bounds;
-	}
+    private final Map<String, String> attributes;
 
-	public Map<String, String> getAttributes() {
-		return attributes;
-	}
+    private final List<Rectangle>     bounds;
 
-	public List<Rectangle> getBounds() {
-		return bounds;
-	}
+    public LinkInfo(Map<String, String> attributes, List<Rectangle> bounds){
+        this.attributes = attributes;
+        this.bounds = bounds;
+    }
+
+    public Map<String, String> getAttributes(){
+        return attributes;
+    }
+
+    public List<Rectangle> getBounds(){
+        return bounds;
+    }
 }
